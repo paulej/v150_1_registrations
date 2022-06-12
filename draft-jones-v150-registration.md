@@ -99,9 +99,9 @@ registered with IANA:
 
 The key words "**MUST**", "**MUST NOT**", "**REQUIRED**", "**SHALL**",
 "**SHALL NOT**", "**SHOULD**", "**SHOULD NOT**", "**RECOMMENDED**",
-"**MAY**", and "**OPTIONAL**" in this document are to be interpreted as
-described in [@!RFC2119][@!RFC8174] when, and only when, they appear in
-all capitals, as shown here.
+"**NOT RECOMMENDED**", "**MAY**", and "**OPTIONAL**" in this document are
+to be interpreted as described in BCP 14 [@!RFC2119] [@!RFC8174] when, and
+only when, they appear in all capitals, as shown here.
 
 # Registration of new SDP parameters
 
@@ -124,11 +124,11 @@ registered as values of the SDP field "att-field".  Those attributes are:
   1. sprtparm, a list of parameters qualifying the "udpsprt" protocol.
   2. sprtmap, which dynamically defines a numerical identifier for modem relay
      packets.
-  3. vndpar (vendor parameters), used to declare vendor-specific parameters.
 
-The SDP attribute "gpmd" (general-purpose media descriptor) is addressed
-elsewhere [@I-D.rajeshkumar-mmusic-gpmd]. This attribute is used extensively
-in Recommendation ITU-T V.150.1 systems.
+> Editor's Note: "vndpar" (vendor parameters), used to declare vendor-specific
+parameters, and "gpmd" (general-purpose media descriptor)
+[@I-D.rajeshkumar-mmusic-gpmd] and are already registered. These attributes are
+used extensively in Recommendation ITU-T V.150-series systems.
 
 # Registration of Media Types
 
@@ -155,7 +155,7 @@ mg: the type of media gateway, from the set "0" (No Transcompression),
 "1" (Single Transcompression) and "2" (Double Transcompression.
 
 CDSCselect: Call discrimination mode selection, from the set 1
-("audio (RFC 2833)"), 2 ("VBD-preferred"), 3 (Mixed).
+("audio" [@RFC4733][@RFC4734]), 2 ("VBD-preferred" [@ITU-T-V.152]), 3 (Mixed).
 
 mrmods: This parameter lists supported modulation types.  These are
 listed as one or more comma-separated elements, where each
@@ -426,5 +426,14 @@ Hisham Abdelhamid, Mohamed Mostafa, and John Malone.
       <organization/>
     </author>
     <date year='2003' month='January' day='13'/>
+ </front>
+</reference>
+<reference anchor='ITU-T-V.152'>
+ <front>
+    <title>Recommendation ITU-T V.152: Procedures for supporting voice-band data over IP networks</title>
+    <author fullname='ITU-T'>
+      <organization/>
+    </author>
+    <date year='2010' month='September' day='13'/>
  </front>
 </reference>
